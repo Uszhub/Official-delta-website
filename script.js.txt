@@ -1,0 +1,18 @@
+ document.addEventListener("DOMContentLoaded", () => {
+    alert("Welcome to my website!");
+});
+// Function to move the text left
+function moveLeft(textId) {
+    const textElement = document.getElementById(textId);
+    let currentMargin = parseInt(window.getComputedStyle(textElement).marginLeft);
+    if (isNaN(currentMargin)) currentMargin = 0;  // If no margin set, start from 0
+    textElement.style.marginLeft = (currentMargin - 10) + "px";
+}
+
+// Function to move the text right
+function moveRight(textId) {
+    const textElement = document.getElementById(textId);
+    let currentMargin = parseInt(window.getComputedStyle(textElement).marginLeft);
+    if (isNaN(currentMargin)) currentMargin = 0;  // If no margin set, start from 0
+    textElement.style.marginLeft = (currentMargin + 10) + "px";
+}
